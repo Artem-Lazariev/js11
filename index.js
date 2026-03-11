@@ -14,9 +14,18 @@ let bankacount = {
             }
 
         }
-    }
+    },
+    "deposit": function (){
+        let cost = prompt("how much money you want to withdraw?")
+        bankacount.balance += cost
+        let al = confirm("do you want to withdraw " + cost )
+        if (al){
+            alert("your money was withdrawn you have " + bankacount.balance + "")
+        }
+    }    
 }
 bankacount.withdraw()
+bankacount.deposit()
 let weather = {
     "temperature": 0,
     "humidity":1,
