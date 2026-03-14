@@ -16,11 +16,11 @@ let bankacount = {
         }
     },
     "deposit": function (){
-        let cost = prompt("how much money you want to withdraw?")
-        this.balance += cost
-        let al = confirm("do you want to withdraw " + cost )
+        let cost = prompt("how much money you want to add?")
+        this.balance += Number(cost)
+        let al = confirm("do you want to add " + cost )
         if (al){
-            alert("your money was withdrawn you have " + bankacount.balance + "")
+            alert("your money was add you have " + this.balance + "")
         }
     }
 }
