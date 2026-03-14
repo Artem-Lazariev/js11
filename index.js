@@ -4,8 +4,8 @@ let bankacount = {
     "balance": 100,
     "withdraw": function (){
         let cost = prompt("how much money you want to withdraw?")
-        bankacount.balance -= cost
-        if (bankacount.balance < 0){
+        this.balance -= cost
+        if (this.balance < 0){
             alert("sorry, you don't have enough money")
         }else {
             let al = confirm("do you want to withdraw " + cost )
@@ -17,12 +17,12 @@ let bankacount = {
     },
     "deposit": function (){
         let cost = prompt("how much money you want to withdraw?")
-        bankacount.balance += cost
+        this.balance += cost
         let al = confirm("do you want to withdraw " + cost )
         if (al){
             alert("your money was withdrawn you have " + bankacount.balance + "")
         }
-    }    
+    }
 }
 bankacount.withdraw()
 bankacount.deposit()
@@ -31,22 +31,18 @@ let weather = {
     "humidity":1,
     "windSpeed": 5,
     "changeWeather": function (){
-        weather.temperature = prompt("how much you want to change the weather?")
+        this.temperature = prompt("how much you want to change the weather?")
     },
     "check": function (){
-        if (weather.temperature > 0){
-            alert("true")
-        }else {
-            alert("false")
-        }
+        return this.temperature > 0;
     }
 }
 weather.changeWeather()
-weather.check()
+alert(weather.check())
 let user = {"name":"cat", "email":"cat", "password":2502,login: function (){
     let email = prompt("enter your email")
     let password = prompt("enter your password")
-    if (email === user.email && password == user.password){
+    if (email === this.email && password == this.password){
         alert("you are logged in")
     }else {
         alert("wrong email or password")
@@ -60,15 +56,11 @@ let moive = {
     "director":1,
     "year": 5,
     "changerate": function (){
-        moive.rate = prompt("how much you want to change the RATE?")
+        this.rate = prompt("how much you want to change the RATE?")
     },
     "check": function (){
-        if (moive.rate > 8){
-            alert("true")
-        }else {
-            alert("false")
-        }
+        return this.rate > 8;
     }
 }
 moive.changerate()
-moive.check()
+alert(moive.check())
