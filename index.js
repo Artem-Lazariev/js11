@@ -24,8 +24,9 @@ let bankacount = {
         }
     }
 }
-bankacount.withdraw()
 bankacount.deposit()
+bankacount.withdraw()
+
 let weather = {
     "temperature": 0,
     "humidity":1,
