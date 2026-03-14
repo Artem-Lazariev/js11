@@ -10,7 +10,7 @@ let bankacount = {
         }else {
             let al = confirm("do you want to withdraw " + cost )
             if (al){
-                alert("your money was withdrawn you have " + bankacount.balance + "")
+                alert("your money was withdrawn you have " + this.balance + "")
             }
 
         }
