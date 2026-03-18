@@ -32,14 +32,11 @@ let weather = {
     "temperature": 0,
     "humidity":1,
     "windSpeed": 5,
-    "changeWeather": function (){
-        this.temperature = prompt("how much you want to change the weather?")
-    },
     "check": function (){
+        this.temperature = prompt("how much you want to change the weather?")
         return this.temperature < 0;
     }
 }
-weather.changeWeather()
 alert("wheater is clean " + weather.check())
 let user = {"name":"cat", "email":"cat", "password":2502,login: function (){
     let email = prompt("enter your email")
