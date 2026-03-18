@@ -7,6 +7,7 @@ let bankacount = {
         this.balance -= cost
         if (this.balance < 0){
             alert("sorry, you don't have enough money")
+            this.balance += cost
         }else {
             let al = confirm("do you want to withdraw " + cost )
             if (al){
@@ -35,11 +36,11 @@ let weather = {
         this.temperature = prompt("how much you want to change the weather?")
     },
     "check": function (){
-        return this.temperature > 0;
+        return this.temperature < 0;
     }
 }
 weather.changeWeather()
-alert(weather.check())
+alert("wheater is clean " + weather.check())
 let user = {"name":"cat", "email":"cat", "password":2502,login: function (){
     let email = prompt("enter your email")
     let password = prompt("enter your password")
@@ -64,4 +65,4 @@ let moive = {
     }
 }
 moive.changerate()
-alert(moive.check())
+console.log(moive.check())
